@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles5.css">
+    <link rel="shortcut icon" href="iconJiu.png" type="image/x-icon">
+    <title>Strength JJ</title>
+</head>
+<body>
+    <header>
+        <h1>Quiz Jiu-Jitsu</h1>
+            <a id="sobre" href="index.html">Voltar</a>
+        </nav>
+    </header>
+
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-image: linear-gradient(to top, #5FA6DD, #419FD9, #9BD1F2, #63D8F2, #EBF6F8 );
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-size: cover;
+    }
+    
+    header{
+        background-image: linear-gradient(to bottom, #144483,#4ab5bb);
+        font-family: var(--fonte-destaque);
+        height: 150px;
+        text-align: center;
+        padding-top: 40px;
+        color: white;
+        
+    }
+    
+    header nav {
+        margin-top: 15px;
+    }
+    
+    header a {
+        color: #5FA6DD;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        background-color: #071a34;
+        padding: 10px;
+        border-radius: 10px; 
+        width: 65px;
+    }
+    
+    header a:hover {
+        text-decoration: underline;
+    }
+    
+    .quiz-form {
+        background-color: rgb(255, 255, 255);
+        margin: auto;
+        padding: 20px;
+        border-radius: 15px;
+        width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .quiz-section {
+        background-color: #05224a;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: white;
+        text-align: center;
+        margin: auto;
+    }
+    
+    h1 {
+        margin:  -15px 12px  35px 422px;
+        text-align: center;
+        background-color: #071a34;
+        padding: 10px;
+        border-radius: 10px; 
+        width: 650px;
+    }
+    
+    .question {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #05224a;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    
+    button:hover {
+        background-color: #05224a;
+    }
+    
+    .button1 {
+        width: 100%;
+        padding: 10px;
+        background-color: #05224a;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .button1:hover {
+        background-color: #05224a;
+    }
+    
+    #result {
+        height: 15px;
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .result-image {
+        display: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+    
+    .kit-image {
+        display: block; 
+        margin: 0 auto 20px auto; 
+    }
+    
+    form {
+        width: 600px;
+        margin: auto;
+    }
+    
+    .question2 {
+        margin: 10px 10px 21px 10px;
+    }
+    
+    h3 {
+        margin: 18px 10px 10px 12px;
+        color: #05224a;
+    }
+    
+    .nestle {
+        margin: 10px 10px 10px 2px;
+    }
+    
+    .segundo {
+        background-color: #05224a;
+        margin: 0px;
+    }
+    
+    h1 {
+        font-family: var(--fonte1);
+        color: white;
+        font-size: 3em;
+        text-shadow: 0px 12px 10px black;
+        padding-bottom: 20px;
+    }
+    </style>
+
+    <main class="quiz-form">
+        <form >
+            <section class="question">
+                <h3>1) Qual atleta é o maior campeão mundial na faixa preta?</h3>
+                <label><input type="radio" name="q1" value="A" onclick="disableOptions('q1'); playsound()">A) Marcus Buchecha</label><br>
+                <label><input type="radio" name="q1" value="B" onclick="disableOptions('q1'); playsound()">B) Rodolfo Viera</label><br>
+                <label><input type="radio" name="q1" value="C" onclick="disableOptions('q1'); playsound()">C) Roger Gracie</label><br>
+                <label><input type="radio" name="q1" value="D" onclick="disableOptions('q1'); playsound()">D) Ronaldo Jacaré</label><br>
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>2) Qual dessas técnicas é usada no Jiu-Jitsu para imobilizar o adversário?</h3>
+                <label><input type="radio" name="q2" value="A" onclick="handleAnswer('q2', 'tablet'); playsound()">A) Gancho frontal </label><br>
+                <label><input type="radio" name="q2" value="B" onclick="handleAnswer('q2', 'pasta'); playsound()">B) Jab</label><br>
+                <label><input type="radio" name="q2" value="C" onclick="handleAnswer('q2', 'pops'); playsound()">C) Kimura</label><br>
+                <label><input type="radio" name="q2" value="D" onclick="handleAnswer('q2', 'cereal'); playsound()">D) Uppercut</label>
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>3)  Quantas faixas existem no Jiu-Jitsu até a faixa preta (considerando as infantis)?</h3>
+                <label><input type="radio" name="q3" value="A" onclick="disableOptions('q3'); playsound()">A) 19</label><br>
+                <label><input type="radio" name="q3" value="B" onclick="disableOptions('q3'); playsound()">B) 17</label><br>
+                <label><input type="radio" name="q3" value="C" onclick="disableOptions('q3'); playsound()">C) 12</label><br>
+                <label><input type="radio" name="q3" value="D" onclick="disableOptions('q3'); playsound()">D) 6</label><br>
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>4)  Qual lutador popularizou o Jiu-Jitsu no UFC ao vencer diversas lutas usando essa arte?</h3>
+                <label><input type="radio" name="q4" value="A" onclick="disableOptions('q4'); playsound()">A) Charles Do Bronx</label><br>
+                <label><input type="radio" name="q4" value="B" onclick="disableOptions('q4'); playsound()">B) Ronaldo Jacaré </label><br>
+                <label><input type="radio" name="q4" value="C" onclick="disableOptions('q4'); playsound()">C) Royce Gracie</label><br>
+            </section>
+       
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>5) Quem é considerado o "pai" do Jiu-Jitsu Brasileiro?</h3>
+                <label><input type="radio" name="q5" value="A" onclick="disableOptions('q5'); playsound()">A) Leandro Lo</label><br>
+                <label><input type="radio" name="q5" value="B" onclick="disableOptions('q5'); playsound()">B) Jonatha Gracie</label><br>
+                <label><input type="radio" name="q5" value="C" onclick="disableOptions('q5'); playsound()">C) Hélio Gracie</label><br>
+            </section>
+            <h2 class="primeiro"></h2>
+            <section class="question">
+                <h3>6) Qual é o principal foco do Jiu-Jitsu?</h3>
+                <label><input type="radio" name="q6" value="A" onclick="disableOptions('q6'); playsound()">A) imobilizar o adversário</label><br>
+                <label><input type="radio" name="q6" value="B" onclick="disableOptions('q6'); playsound()">B) Apagar o adversário</label><br>
+                <label><input type="radio" name="q6" value="C" onclick="disableOptions('q6'); playsound()">C) Lesionar o adversário</label><br>
+            </section>
+
+            <section class="question"></section>
+                <h3>7) Como o Jiu-Jitsu é conhecido?</h3>
+                <label><input type="radio" name="q7" value="A" onclick="disableOptions('q7'), playsound()">A) Luta agarrada</label><br>
+                <label><input type="radio" name="q7" value="B" onclick="disableOptions('q7'), playsound()">B) Arte suave</label><br>
+                <label><input type="radio" name="q7" value="C" onclick="disableOptions('q7'), playsound()">C) grappiling</label><br>
+            </section>
+
+            <section class="question"></section>
+                <h3>8) Qual a maior faixa do Jiu-Jitsu</h3>
+                <label><input type="radio" name="q8" value="A" onclick="disableOptions('q8'), playsound()">A) Preta</label><br>
+                <label><input type="radio" name="q8" value="B" onclick="disableOptions('q8'), playsound()">B) Vermelha coral branca</label><br>
+                <label><input type="radio" name="q8" value="C" onclick="disableOptions('q8'), playsound()">C) Vermelha</label><br>
+                <label><input type="radio" name="q8" value="D" onclick="disableOptions('q8'), playsound()">D) Vermelha coral preta</label><br>
+            </section>
+
+            <section class="question"></section>
+                <h3>9) Qual a academia mais conhecida de Jiu-Jitsu?</h3>
+                <label><input type="radio" name="q9" value="A" onclick="disableOptions('q9'), playsound()">A) Ator Jiu-Jitsu </label><br>
+                <label><input type="radio" name="q9" value="B" onclick="disableOptions('q9'), playsound()">B) Melqui Galvão</label><br>
+                <label><input type="radio" name="q9" value="C" onclick="disableOptions('q9'), playsound()">C) Chekmat</label><br>
+                <label><input type="radio" name="q9" value="D" onclick="disableOptions('q9'), playsound()">D) Gracie Barra</label><br>
+            </section>
+
+            <section class="question"></section>
+                <h3>10) Quem foi o primeiro campeão mundial de Jiu-Jitsu?</h3>
+                <label><input type="radio" name="q10" value="A" onclick="disableOptions('q10'), playsound()">A) Ronaldo Jacaré</label><br>
+                <label><input type="radio" name="q10" value="B" onclick="disableOptions('q10'), playsound()">B) Leandro Lo</label><br>
+                <label><input type="radio" name="q10" value="C" onclick="disableOptions('q10'), playsound()">C) Charles Do Bronx</label><br>
+                <label><input type="radio" name="q10" value="D" onclick="disableOptions('q10'), playsound()">D) Roger Gracie</label><br>
+            </section>
+
+            <button type="button" onclick="SubmitQuiz()">Enviar resposta</button>
+            <h2 class="segundo"></h2>
+        
+            <button class="button1" id="resetbutton" type="button" onclick="resetQuiz()" disabled>Tentar novamente</button>
+        </form>
+        <audio id="venceusom" src="venceu.mp3" preload="auto"></audio>
+        <audio id="selecionasom" src="seleciona.mp3" preload="auto"></audio>
+        <audio id="perdeuSom" src="perdeu.mp3" preload="auto"></audio>
+
+        <section id="result"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
